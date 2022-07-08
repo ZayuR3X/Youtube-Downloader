@@ -26,7 +26,7 @@ def audio_download():
     x = YouTube(input("Link: "))
     stream = x.streams.filter(only_audio=True).first()
 
-    output = stream.download("~/Müzikler")
+    output = stream.download("Müzikler")
     base, ext = os.path.splitext(output)
     to_mp3 = base + ".mp3"
     os.rename(output,to_mp3)
