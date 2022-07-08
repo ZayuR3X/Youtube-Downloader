@@ -1,9 +1,7 @@
-from fileinput import Müzikler
 from pytube import YouTube
 import os
 
 """link = input("Link: ")
-
 directory = input("Directory: ")
 
 try: 
@@ -28,7 +26,7 @@ def audio_download():
     x = YouTube(input("Link: "))
     stream = x.streams.filter(only_audio=True).first()
 
-    output = stream.download(filename=Müzikler)
+    output = stream.download("~/Müzikler")
     base, ext = os.path.splitext(output)
     to_mp3 = base + ".mp3"
     os.rename(output,to_mp3)
