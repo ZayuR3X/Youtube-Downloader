@@ -29,7 +29,8 @@ def audio_download():
     stream = x.streams.filter(only_audio=True).first()
     stream.download()
     print ("-"*30)
-    print ("Successfully")
     print("Audio Name: ",x.title)
+    print ("Successfully")
+    print ("-"*30)
 
 audio_download()
