@@ -1,7 +1,6 @@
-from fileinput import filename
+from fileinput import Müzikler
 from pytube import YouTube
 import os
-import Müzikler
 
 """link = input("Link: ")
 
