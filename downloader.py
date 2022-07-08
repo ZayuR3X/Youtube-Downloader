@@ -2,7 +2,7 @@ from pytube import YouTube
 import os
 
 
-link = input("Link: ")
+"""link = input("Link: ")
 
 directory = input("Directory: ")
 
@@ -22,4 +22,13 @@ base, ext = os.path.splitext(output)
 to_mp3 = base + ".mp3"
 os.rename(output, to_mp3)
 
-print ("Download Complate!")
+print ("Download Complate!")"""
+
+def audio_download():
+    x = YouTube(input("Link: "))
+    stream = x.streams.filter(only_audio=True).first()
+    stream.download()
+    print ("-"*30)
+    print ("Successfully")
+    print("Audio Name: ",x.title)
+    
