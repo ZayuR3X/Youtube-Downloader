@@ -1,5 +1,7 @@
+from fileinput import filename
 from pytube import YouTube
 import os
+import Müzikler
 
 """link = input("Link: ")
 
@@ -27,11 +29,11 @@ def audio_download():
     x = YouTube(input("Link: "))
     stream = x.streams.filter(only_audio=True).first()
 
-    output = stream.download()
+    output = stream.download(filename=Müzikler)
     base, ext = os.path.splitext(output)
     to_mp3 = base + ".mp3"
     os.rename(output,to_mp3)
-    
+
     print ("-"*30)
     print("Audio Name: ",x.title)
     print ("Successfully")
