@@ -42,7 +42,7 @@ def audio_download():
     os.rename(output,to_mp3)
 
     print ("-"*30)
-    print("Audio Name: ",x.title)
+    print("Audio Name: ",link.title)
     print ("Successfully")
     print ("-"*30)
 
