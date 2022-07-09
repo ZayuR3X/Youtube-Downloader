@@ -24,11 +24,7 @@ print ("Download Complate!")"""
 
 def audio_download():
     global link
-    link = (input("Link('Çıkmak için [n]')\n"))
-    if link == "n":
-        exit()
-    else:
-        link = YouTube(link)
+    link = YouTube(input("Link\n----> "))
         
     stream = link.streams.filter(only_audio=True).first()
 
@@ -48,7 +44,14 @@ def audio_download():
 
 
 while True:
-        audio_download()
+        
+        """try:
+            audio_download()
+            yt = YouTube(link)
+        except:                                         #video indikten sonra except çalışıyor...
+            print("Hatalı Link\nProgram Kapanıyor...")
+            exit()"""
+
         dongu = input("Devam edilsin mi? (y/n)  ")
         if dongu == "n":
             break
