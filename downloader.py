@@ -1,4 +1,3 @@
-from sys import exec_prefix
 from pytube import YouTube
 import os
 
@@ -40,7 +39,6 @@ def audio_download():
     print("Audio Name: ",x.title)
     print ("Successfully")
     print ("-"*30)
-
 
 
 while True:
