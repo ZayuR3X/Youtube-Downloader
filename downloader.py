@@ -24,9 +24,10 @@ print ("Download Complate!")"""
 
 def audio_download():
     x = YouTube(input("Link: "))
+    print("İndiriliyor...")
     stream = x.streams.filter(only_audio=True).first()
     
-    print("İndiriliyor...")
+    
    
     output = stream.download("Müzikler")
     base, ext = os.path.splitext(output)
