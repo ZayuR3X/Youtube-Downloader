@@ -1,3 +1,4 @@
+from sys import exec_prefix
 from pytube import YouTube
 import os
 
@@ -23,6 +24,7 @@ os.rename(output, to_mp3)
 print ("Download Complate!")"""
 
 def audio_download():
+    global x
     x = YouTube(input("Link: "))
     print("İndiriliyor...")
     stream = x.streams.filter(only_audio=True).first()
@@ -39,8 +41,16 @@ def audio_download():
     print ("Successfully")
     print ("-"*30)
 
+
+
 while True:
-    audio_download()
+    try:
+        audio_download()
+        x = YouTube(x)
+
+    except:
+        print("Hatalı link!")
+        continue
     
     dongu = input("Devam edilsin mi? (y/n) ")
     if dongu == "y":
