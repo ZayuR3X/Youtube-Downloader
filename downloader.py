@@ -23,11 +23,17 @@ os.rename(output, to_mp3)
 print ("Download Complate!")"""
 
 def audio_download():
-    global x
-    x = YouTube(input("Link: "))
-    print("İndiriliyor...")
-    stream = x.streams.filter(only_audio=True).first()
-    
+    global link
+    link = (input("Link('Çıkmak için [n]')\n"))
+    if link == "n":
+        exit()
+    else:
+        link = YouTube(link)
+        
+    stream = link.streams.filter(only_audio=True).first()
+
+
+    print("İndiriliyor...") 
     
    
     output = stream.download("Müzikler")
@@ -42,17 +48,22 @@ def audio_download():
 
 
 while True:
-    try:
         audio_download()
-        x = YouTube(x)
+        dongu = input("Devam edilsin mi? (y/n)first ")
+        if dongu == "n":
+            break
+        elif dongu == "y":
+            continue
 
-    except:
-        print("Hatalı link!")
-        continue
-    
-    dongu = input("Devam edilsin mi? (y/n) ")
-    if dongu == "y":
-        continue
-    
-    elif dongu == "n":
-        break
+        while dongu != ["y","n"]:
+            print("y ve n seçeneği mevcuttur!!")
+            dongu = input("Devam edilsin mi? (y/n)two ")
+            if dongu == "y":
+                break
+            elif dongu == "n":
+                break
+        if dongu == "n": #for two
+            break
+        
+#villian = https://www.youtube.com/watch?v=xoWxv2yZXLQ
+#popstars = https://www.youtube.com/watch?v=UOxkGD8qRB4
