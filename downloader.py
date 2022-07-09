@@ -36,4 +36,12 @@ def audio_download():
     print ("Successfully")
     print ("-"*30)
 
-audio_download()
+while True:
+    audio_download()
+    
+    dongu = input("Devam edilsin mi? (y/n) ")
+    if dongu == "y":
+        continue
+    
+    elif dongu == "n":
+        break
