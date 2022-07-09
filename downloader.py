@@ -49,7 +49,7 @@ def audio_download():
 
 while True:
         audio_download()
-        dongu = input("Devam edilsin mi? (y/n)first ")
+        dongu = input("Devam edilsin mi? (y/n)  ")
         if dongu == "n":
             break
         elif dongu == "y":
@@ -57,7 +57,7 @@ while True:
 
         while dongu != ["y","n"]:
             print("y ve n seçeneği mevcuttur!!")
-            dongu = input("Devam edilsin mi? (y/n)two ")
+            dongu = input("Devam edilsin mi? (y/n)  ")
             if dongu == "y":
                 break
             elif dongu == "n":
@@ -65,5 +65,3 @@ while True:
         if dongu == "n": #for two
             break
         
-#villian = https://www.youtube.com/watch?v=xoWxv2yZXLQ
-#popstars = https://www.youtube.com/watch?v=UOxkGD8qRB4
