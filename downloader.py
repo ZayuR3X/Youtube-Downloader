@@ -32,7 +32,7 @@ def audio_download():
     print("İndiriliyor...") 
     
    
-    output = stream.download("C:\Users\Lenovo\Desktop\githubprojects\yt_downloader\Müzikler2.0")
+    output = stream.download("Müzikler2.0")
     base, ext = os.path.splitext(output)
     to_mp3 = base + ".mp3"
     os.rename(output,to_mp3)
