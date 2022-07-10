@@ -44,7 +44,8 @@ def audio_download():
 
 
 while True:
-        
+        audio_download()
+
         """try:
             audio_download()
             yt = YouTube(link)
