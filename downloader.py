@@ -10,6 +10,13 @@ giris = Figlet(font="roman", width=150)
 print(Fore.LIGHTCYAN_EX + giris.renderText("Ahmet AGA"))
 print(Fore.LIGHTBLUE_EX + "Programı kapatmak için <CTRL+C>")
 
+#pyfiglet result = pyfiglet.figlet_format("Geeks For Geeks", font = "digital" )
+#print(result) 
+#output
+"""+-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+
+|G|e|e|k|s| |F|o|r| |G|e|e|k|s|
++-+-+-+-+-+ +-+-+-+ +-+-+-+-+-+"""
+
 
 """link = input("Link: ")
 directory = input("Directory: ")
