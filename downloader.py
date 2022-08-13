@@ -17,7 +17,7 @@ directory = input("Directory: ")
 try: 
     yt = YouTube(link) #link kontrol
 except:
-    print ("ınvalid Link !!!") #böyle bi link yok kanka
+    print ("Invalid Link !!!") #böyle bi link yok kanka
     exit()
 
 mp3 = yt.streams.filter(only_audio=True).first()
