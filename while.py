@@ -8,7 +8,7 @@ while True:
         break
         
 
-
+# bi döngü denedim kanka
 
 
 
