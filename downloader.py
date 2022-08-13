@@ -1,5 +1,15 @@
 from pytube import YouTube
 import os
+from pyfiglet import Figlet
+from colorama import init, Fore, Back, Style
+import colorama
+
+colorama.init(autoreset=True)
+
+giris = Figlet(font="roman", width=150)
+print(Fore.LIGHTCYAN_EX + giris.renderText("Ahmet AGA"))
+print(Fore.LIGHTBLUE_EX + "Programı kapatmak için <CTRL+C>")
+
 
 """link = input("Link: ")
 directory = input("Directory: ")
@@ -23,7 +33,7 @@ os.rename(output, to_mp3)
 print ("Download Complate!")"""
 
 def audio_download():
-    global link
+
     link = YouTube(input("Link\n----> "))
         
     stream = link.streams.filter(only_audio=True).first()
@@ -32,7 +42,7 @@ def audio_download():
     print("İndiriliyor...") 
     
    
-    output = stream.download("Müzikler2.0")
+    output = stream.download("Müzikler")
     base, ext = os.path.splitext(output)
     to_mp3 = base + ".mp3"
     os.rename(output,to_mp3)
@@ -68,4 +78,5 @@ while True:
                 break
         if dongu == "n": #for two
             break
-        
+
+     
